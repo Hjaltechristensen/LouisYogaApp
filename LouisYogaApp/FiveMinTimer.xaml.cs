@@ -6,6 +6,7 @@ public partial class FiveMinTimer : ContentPage
     bool startStop = true;
     bool loopBool = true;
     bool checkNewRound = true;
+    bool startToGange = true;
     int runde;
     int genstartMin = 05;
     int genstartSek = 00;
@@ -27,15 +28,19 @@ public partial class FiveMinTimer : ContentPage
 
     private async void Start_Clicked(object sender, EventArgs e)
     {
-        IAudioPlayer player = MainPage.player1;
-        player.Play();
-        startStop = true;
-        loopBool = true;
-        await Task.Delay(1000);
-        UpdateArc();
+        if (startToGange)
+        {
+            IAudioPlayer player = MainPage.player1;
+            player.Play();
+            startStop = true;
+            loopBool = true;
+            await Task.Delay(1000);
+            UpdateArc();
+        }
     }
     private async void UpdateArc()
     {
+        startToGange = false;
         while (loopBool)
         {
             for (i = 0; i < RoundChoiceFiveMinTimer.tal; i++)
@@ -105,6 +110,7 @@ public partial class FiveMinTimer : ContentPage
             loopBool = false;
         }
         startStop = false;
+        startToGange = true;
     }
 
     private void Stop_Clicked(object sender, EventArgs e)
@@ -122,5 +128,6 @@ public partial class FiveMinTimer : ContentPage
         startStop = false;
         loopBool = false;
         checkNewRound = false;
+        startToGange = true;
     }
 }
