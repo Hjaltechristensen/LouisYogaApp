@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LouisYogaApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LouisYogaApp"
+    Shell.FlyoutBehavior="Disabled"
+    Title="LouisYogaApp">
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:RoundChoiceOneMinTimer}"
+        Route="RoundChoiceOneMinTimer" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:RoundChoiceFiveMinTimer}"
+        Route="RoundChoiceFiveMinTimer" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:RoundChoiceTenMinTimer}"
+        Route="RoundChoiceTenMinTimer" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:OneMinTimer}"
+        Route="OneMinTimer" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:FiveMinTimer}"
+        Route="FiveMinTimer" />
+
+    <ShellContent
+        Title="Louis Yoga App"
+        ContentTemplate="{DataTemplate local:TenMinTimer}"
+        Route="TenMinTimer" />
+
+</Shell>

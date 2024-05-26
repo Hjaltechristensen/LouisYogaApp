@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="LouisYogaApp.MainPage" 
+             Shell.BackgroundColor="#65a188"
+             BackgroundColor="#65a188">
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Center">
+            <Label
+                Text="Louis Yoga App"
+                FontFamily="Strande2"
+                TextColor="#2a4c3c"
+                HeightRequest="40"
+                FontSize="30"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#65a188" StatusBarStyle="LightContent" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <Image
+            Source="hamsaremovebg"
+            WidthRequest="420"
+            VerticalOptions="EndAndExpand"
+            HeightRequest="650"
+            Aspect="Center"
+            Opacity="0.65"/>
+        <Image
+            Source="mulig.png"
+            HeightRequest="200"
+            VerticalOptions="Start"/>
+
+        <VerticalStackLayout Padding="55" Spacing="50" MaximumHeightRequest="400">
+
+            <Button Clicked="etMinTimer" TextColor="#2a4c3c" Text="3 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+            <Button x:Name="femMinTimer" Clicked="femMinTimer_Clicked" TextColor="#2a4c3c" Text="5 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+            <Button x:Name="tiMinTimer" Clicked="tiMinTimer_Clicked" TextColor="#2a4c3c" Text="10 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="LouisYogaApp.RoundChoiceOneMinTimer"
+             Shell.BackgroundColor="#65a188"
+             BackgroundColor="#65a188"
+             Title="RoundChoiceOneMinTimer">
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Start" Spacing="40">
+            <Button x:Name="backBtn" Clicked="backBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
+            <Label
+                Text="Louis Yoga App"
+                FontFamily="Strande2"
+                TextColor="#2a4c3c"
+                HeightRequest="40"
+                FontSize="30"
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#65a188" StatusBarStyle="LightContent" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <Image
+            Source="hamsaremovebg"
+            WidthRequest="420"
+            VerticalOptions="EndAndExpand"
+            HeightRequest="650"
+            Aspect="Center"
+            Opacity="0.65"/>
+        <Image
+            Source="mulig.png"
+            HeightRequest="200"
+            VerticalOptions="Start"/>
+        
+        <VerticalStackLayout MaximumHeightRequest="430">
+            <Label Text="1 min timer choose rounds" FontSize="30" TextColor="#2a4c3c" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        
+
+        <VerticalStackLayout Padding="55" Spacing="120" MaximumHeightRequest="350">
+            <HorizontalStackLayout Spacing="0">
+                <Button x:Name="minus" Clicked="minus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="Start" WidthRequest="80" HeightRequest="80" Text="-" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+                <Border StrokeShape="RoundRectangle 50"
+                        StrokeThickness="0"
+                        BackgroundColor="Wheat"
+                        WidthRequest="122"
+                        Opacity="0.9">
+                    <Label x:Name="counter"
+                           Text="1"
+                           TextColor="#2a4c3c"
+                           FontSize="37"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Opacity="0.65"/>
+                </Border>
+                <Button x:Name="plus" Clicked="plus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="End" WidthRequest="80" HeightRequest="80" Text="+" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Button x:Name="forward" Clicked="forward_Clicked" CornerRadius="50" TextColor="#2a4c3c" WidthRequest="282" Text="Fortsæt" FontSize="30" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

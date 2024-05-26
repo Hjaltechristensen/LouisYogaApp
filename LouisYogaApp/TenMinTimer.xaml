@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="LouisYogaApp.TenMinTimer"
+             Shell.BackgroundColor="#65a188"
+             BackgroundColor="#65a188"
+             Title="TenMinTimer">
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Start" Spacing="40">
+            <Button x:Name="backBtn" Clicked="backBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
+            <Label
+                Text="Louis Yoga App"
+                FontFamily="Strande2"
+                TextColor="#2a4c3c"
+                HeightRequest="40"
+                FontSize="30"
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#65a188" StatusBarStyle="LightContent" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <Image
+            Source="hamsaremovebg"
+            WidthRequest="420"
+            VerticalOptions="EndAndExpand"
+            HeightRequest="650"
+            Aspect="Center"
+            Opacity="0.65"/>
+        <Image
+            Source="mulig.png"
+            HeightRequest="200"
+            VerticalOptions="Start"/>
+        <VerticalStackLayout MaximumHeightRequest="430" Spacing="68">
+            <Border StrokeShape="RoundRectangle 25"
+            StrokeThickness="0"
+            BackgroundColor="#e4e3aa"
+            WidthRequest="300"
+            Opacity="0.9">
+                <Label x:Name="timer"
+               Text="10:00"
+               TextColor="#2a4c3c"
+               FontSize="50"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Opacity="0.6"/>
+            </Border>
+            <VerticalStackLayout Spacing="0">
+                <Border StrokeShape="RoundRectangle 25"
+                        StrokeThickness="0"
+                        BackgroundColor="#e4e3aa"
+                        WidthRequest="300"
+                        Opacity="0.9">
+                    <Label x:Name="rounds" 
+                           Text="Rounds"
+                           TextColor="#2a4c3c"
+                           FontSize="50"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Opacity="0.6"/>
+                </Border>
+            </VerticalStackLayout>
+            <VerticalStackLayout Spacing="10">
+                <Button x:Name="Start" Clicked="Start_Clicked" CornerRadius="50" Text="Start" FontSize="40" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="300" HeightRequest="70" Opacity="0.94"/>
+                <HorizontalStackLayout Spacing="33">
+                    <Button x:Name="Stop" Clicked="Stop_Clicked" CornerRadius="50" Text="Stop/Restart" FontSize="28" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="180" HeightRequest="70" Opacity="0.94"/>
+                    <Button x:Name="Pause" Clicked="Pause_Clicked" CornerRadius="50" Text="Pause" FontSize="29" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="179" HeightRequest="70" Opacity="0.94"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
