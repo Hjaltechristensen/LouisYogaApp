@@ -30,6 +30,7 @@ public partial class OneMinTimer : ContentPage
     {
         if (startToGange)
         {
+            startToGange = false;
             IAudioPlayer player = MainPage.player1;
             player.Play();
             startStop = true;
@@ -40,7 +41,6 @@ public partial class OneMinTimer : ContentPage
     }
     private async void UpdateArc()
     {
-        startToGange = false;
         while (loopBool)
         {
             for (i = 0; i < RoundChoiceOneMinTimer.tal; i++)
