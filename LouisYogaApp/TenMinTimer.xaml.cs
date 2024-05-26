@@ -6,6 +6,7 @@ public partial class TenMinTimer : ContentPage
     bool startStop = true;
     bool loopBool = true;
     bool checkNewRound = true;
+    bool startToGange = true;
     int runde;
     int genstartMin = 10;
     int genstartSek = 00;
@@ -27,15 +28,19 @@ public partial class TenMinTimer : ContentPage
 
     private async void Start_Clicked(object sender, EventArgs e)
     {
-        IAudioPlayer player = MainPage.player1;
-        player.Play();
-        startStop = true;
-        loopBool = true;
-        await Task.Delay(1000);
-        UpdateArc();
+        if (startToGange)
+        {
+            IAudioPlayer player = MainPage.player1;
+            player.Play();
+            startStop = true;
+            loopBool = true;
+            await Task.Delay(1000);
+            UpdateArc();
+        }
     }
     private async void UpdateArc()
     {
+        startToGange = false;
         while (loopBool)
         {
             for (i = 0; i < RoundChoiceTenMinTimer.tal; i++)
@@ -105,13 +110,17 @@ public partial class TenMinTimer : ContentPage
             loopBool = false;
         }
         startStop = false;
+        startToGange = true;
     }
 
     private void Stop_Clicked(object sender, EventArgs e)
     {
         startStop = false;
         loopBool = false;
-        timer.Text = $"10:00";
+        startToGange = true;
+        genstartMin = minTal;
+        genstartSek = sekTal;
+        timer.Text = $"{genstartMin}:0{genstartSek}";
         rounds.Text = $"Round {1}/{RoundChoiceTenMinTimer.tal}";
         runde = 1;
         i = 0;
@@ -122,5 +131,6 @@ public partial class TenMinTimer : ContentPage
         startStop = false;
         loopBool = false;
         checkNewRound = false;
+        startToGange = true;
     }
 }

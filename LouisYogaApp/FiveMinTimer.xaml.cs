@@ -117,7 +117,10 @@ public partial class FiveMinTimer : ContentPage
     {
         startStop = false;
         loopBool = false;
-        timer.Text = $"05:00";
+        startToGange = true;
+        genstartMin = minTal;
+        genstartSek = sekTal;
+        timer.Text = $"0{genstartMin}:0{genstartSek}";
         rounds.Text = $"Round {1}/{RoundChoiceFiveMinTimer.tal}";
         runde = 1;
         i = 0;
