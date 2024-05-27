@@ -36,7 +36,7 @@
             VerticalOptions="Start"/>
         
         <VerticalStackLayout MaximumHeightRequest="430">
-            <Label Text="1 min timer choose rounds" FontSize="30" TextColor="#2a4c3c" HorizontalOptions="Center"/>
+            <Label Text="3 min timer choose rounds" FontSize="30" TextColor="#2a4c3c" HorizontalOptions="Center"/>
         </VerticalStackLayout>
         
 
