@@ -8,7 +8,7 @@
              Title="FiveMinTimer">
     <Shell.TitleView>
         <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Start" Spacing="40">
-            <Button x:Name="backBtn" Clicked="backBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
+            <Button x:Name="BackBtn" Clicked="BackBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
             <Label
                 Text="Louis Yoga App"
                 FontFamily="Strande2"

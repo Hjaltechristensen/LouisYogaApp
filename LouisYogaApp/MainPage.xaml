@@ -35,9 +35,9 @@
 
         <VerticalStackLayout Padding="55" Spacing="50" MaximumHeightRequest="400">
 
-            <Button Clicked="etMinTimer" TextColor="#2a4c3c" Text="3 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
-            <Button x:Name="femMinTimer" Clicked="femMinTimer_Clicked" TextColor="#2a4c3c" Text="5 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
-            <Button x:Name="tiMinTimer" Clicked="tiMinTimer_Clicked" TextColor="#2a4c3c" Text="10 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+            <Button Clicked="OneMinuteTimer_Clicked" TextColor="#2a4c3c" Text="3 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+            <Button x:Name="femMinTimer" Clicked="FiveMinuteTimer_Clicked" TextColor="#2a4c3c" Text="5 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
+            <Button x:Name="tiMinTimer" Clicked="TenMinuteTimer_Clicked" TextColor="#2a4c3c" Text="10 minut timer" FontSize="50" BackgroundColor="#e4e3aa" CornerRadius="50" Opacity="0.9"></Button>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

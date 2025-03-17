@@ -8,7 +8,7 @@
              Title="RoundChoiceFiveMinTimer">
     <Shell.TitleView>
         <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Start" Spacing="40">
-            <Button x:Name="backBtn" Clicked="backBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
+            <Button x:Name="BackBtn" Clicked="BackBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
             <Label
                 Text="Louis Yoga App"
                 FontFamily="Strande2"
@@ -45,7 +45,7 @@
 
         <VerticalStackLayout Padding="55" Spacing="120" MaximumHeightRequest="350">
             <HorizontalStackLayout Spacing="0">
-                <Button x:Name="minus" Clicked="minus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="Start" WidthRequest="80" HeightRequest="80" Text="-" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+                <Button x:Name="Minus" Clicked="Minus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="Start" WidthRequest="80" HeightRequest="80" Text="-" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
                 <Border StrokeShape="RoundRectangle 50"
                         StrokeThickness="0"
                         BackgroundColor="Wheat"
@@ -59,10 +59,10 @@
                            HorizontalOptions="Center"
                            Opacity="0.65"/>
                 </Border>
-                <Button x:Name="plus" Clicked="plus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="End" WidthRequest="80" HeightRequest="80" Text="+" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+                <Button x:Name="Plus" Clicked="Plus_Clicked" CornerRadius="50" TextColor="#2a4c3c" HorizontalOptions="End" WidthRequest="80" HeightRequest="80" Text="+" FontSize="40" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Button x:Name="forward" Clicked="forward_Clicked" CornerRadius="50" TextColor="#2a4c3c" WidthRequest="282" Text="Fortsæt" FontSize="30" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
+                <Button x:Name="Forward" Clicked="Forward_Clicked" CornerRadius="50" TextColor="#2a4c3c" WidthRequest="282" Text="Fortsæt" FontSize="30" BackgroundColor="#e4e3aa" Opacity="0.9"></Button>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>

@@ -26,7 +26,7 @@ public partial class OneMinTimer : ContentPage
         rounds.Text = $"Round {runde}/{RoundChoiceOneMinTimer.tal}";
     }
 
-    private async void backBtn_Clicked(object sender, EventArgs e)
+    private async void BackBtn_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync($"//{nameof(RoundChoiceOneMinTimer)}");
     }
@@ -118,7 +118,7 @@ public partial class OneMinTimer : ContentPage
         startToGange = true;
     }
 
-    private void stop_Clicked(object sender, EventArgs e)
+    private void Stop_Clicked(object sender, EventArgs e)
     {
         startStop = false;
         loopBool = false;
@@ -131,7 +131,7 @@ public partial class OneMinTimer : ContentPage
         i = 0;
     }
 
-    private void pause_Clicked(object sender, EventArgs e)
+    private void Pause_Clicked(object sender, EventArgs e)
     {
         startStop = false;
         loopBool = false;

@@ -8,7 +8,7 @@
              Title="OneMinTimer">
     <Shell.TitleView>
         <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="Start" Spacing="40">
-            <Button x:Name="backBtn" Clicked="backBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
+            <Button x:Name="BackBtn" Clicked="BackBtn_Clicked" Text="&lt;" FontSize="25" BackgroundColor="#65a188" TextColor="#2a4c3c" HorizontalOptions="Start"/>
             <Label
                 Text="Louis Yoga App"
                 FontFamily="Strande2"
@@ -69,8 +69,8 @@
             <VerticalStackLayout Spacing="10">
                 <Button x:Name="Start" Clicked="Start_Clicked" CornerRadius="50" Text="Start" FontSize="40" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="300" HeightRequest="70" Opacity="0.94"/>
                 <HorizontalStackLayout Spacing="33">
-                    <Button x:Name="stop" Clicked="stop_Clicked" CornerRadius="50" Text="Stop/Restart" FontSize="28" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="180" HeightRequest="70" Opacity="0.94"/>
-                    <Button x:Name="pause" Clicked="pause_Clicked" CornerRadius="50" Text="Pause" FontSize="29" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="179" HeightRequest="70" Opacity="0.94"/>
+                    <Button x:Name="Stop" Clicked="Stop_Clicked" CornerRadius="50" Text="Stop/Restart" FontSize="28" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="180" HeightRequest="70" Opacity="0.94"/>
+                    <Button x:Name="Pause" Clicked="Pause_Clicked" CornerRadius="50" Text="Pause" FontSize="29" BackgroundColor="#e4e3aa" TextColor="#2a4c3c" WidthRequest="179" HeightRequest="70" Opacity="0.94"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>

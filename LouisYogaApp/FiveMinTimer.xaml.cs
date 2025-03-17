@@ -10,8 +10,8 @@ public partial class FiveMinTimer : ContentPage
     int runde;
     int genstartMin = 05;
     int genstartSek = 00;
-    int minTal = 05;
-    int sekTal = 00;
+    private readonly int minTal = 05;
+	private readonly int sekTal = 00;
     int i;
 
     public FiveMinTimer()
@@ -26,7 +26,7 @@ public partial class FiveMinTimer : ContentPage
         rounds.Text = $"Round {runde}/{RoundChoiceFiveMinTimer.tal}";
     }
 
-    private async void backBtn_Clicked(object sender, EventArgs e)
+    private async void BackBtn_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync($"//{nameof(RoundChoiceFiveMinTimer)}");
     }

@@ -10,8 +10,8 @@ public partial class TenMinTimer : ContentPage
     int runde;
     int genstartMin = 10;
     int genstartSek = 00;
-    int minTal = 10;
-    int sekTal = 00;
+    private readonly int minTal = 10;
+    private readonly int sekTal = 00;
     int i;
 
     public TenMinTimer()
@@ -26,7 +26,7 @@ public partial class TenMinTimer : ContentPage
         rounds.Text = $"Round {runde}/{RoundChoiceTenMinTimer.tal}";
     }
 
-    private async void backBtn_Clicked(object sender, EventArgs e)
+    private async void BackBtn_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync($"//{nameof(RoundChoiceTenMinTimer)}");
     }
