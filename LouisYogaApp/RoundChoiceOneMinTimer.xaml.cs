@@ -7,15 +7,10 @@ public partial class RoundChoiceOneMinTimer : ContentPage
 	{
 		InitializeComponent();
 	}
-
     private void minus_Clicked(object sender, EventArgs e)
     {
         tal = Convert.ToInt32(counter.Text);
-        if (tal == 1)
-        {
-
-        }
-        else
+        if (tal > 1)
         {
             tal -= 1;
             counter.Text = tal.ToString();
@@ -41,5 +36,10 @@ public partial class RoundChoiceOneMinTimer : ContentPage
             tal = 1;
         }
         await Shell.Current.GoToAsync($"//{nameof(OneMinTimer)}");
+    }
+
+    private async void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
     }
 }

@@ -23,6 +23,9 @@
     </ContentPage.Behaviors>
 
     <Grid>
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Right" Swiped="SwipeGestureRecognizer_Swiped"/>
+        </Grid.GestureRecognizers>
         <Image
             Source="hamsaremovebg"
             WidthRequest="420"

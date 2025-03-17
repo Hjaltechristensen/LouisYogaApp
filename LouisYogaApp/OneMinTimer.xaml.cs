@@ -20,6 +20,11 @@ public partial class OneMinTimer : ContentPage
         runde = 1;
         rounds.Text = $"Round {runde}/{RoundChoiceOneMinTimer.tal}";
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        rounds.Text = $"Round {runde}/{RoundChoiceOneMinTimer.tal}";
+    }
 
     private async void backBtn_Clicked(object sender, EventArgs e)
     {
@@ -92,7 +97,7 @@ public partial class OneMinTimer : ContentPage
                     {
                         if (genstartMin == 0 && genstartSek == 0)
                         {
-                            IAudioPlayer player = MainPage.player;
+                            IAudioPlayer? player = MainPage.player;
                             player.Play();
                             genstartMin = minTal;
                             timer.Text = $"0{genstartMin}:0{genstartSek}";
@@ -132,5 +137,10 @@ public partial class OneMinTimer : ContentPage
         loopBool = false;
         checkNewRound = false;
         startToGange = true;
+    }
+
+    private async void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(RoundChoiceOneMinTimer)}");
     }
 }

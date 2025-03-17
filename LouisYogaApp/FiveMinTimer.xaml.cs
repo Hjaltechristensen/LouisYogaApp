@@ -20,6 +20,11 @@ public partial class FiveMinTimer : ContentPage
         runde = 1;
         rounds.Text = $"Round {runde}/{RoundChoiceFiveMinTimer.tal}";
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        rounds.Text = $"Round {runde}/{RoundChoiceFiveMinTimer.tal}";
+    }
 
     private async void backBtn_Clicked(object sender, EventArgs e)
     {
@@ -132,5 +137,10 @@ public partial class FiveMinTimer : ContentPage
         loopBool = false;
         checkNewRound = false;
         startToGange = true;
+    }
+
+    private async void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(RoundChoiceFiveMinTimer)}");
     }
 }
